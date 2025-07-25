@@ -41,15 +41,15 @@ public class forceclaim implements CommandExecutor {
         int coordx,coordy;
 
         if (args.length == 4 && "-w".equalsIgnoreCase(args[3])) {
-            chunkX = Integer.parseInt(args[1]);
-            chunkZ = Integer.parseInt(args[2]);
-        }else{
             coordx = Integer.parseInt(args[1]);
             coordy = Integer.parseInt(args[2]);
             WorldCoord worldCoord = WorldCoord.parseWorldCoord(String.valueOf(world), coordx, coordy);
             Coord c = worldCoord.getCoord();
             chunkX = c.getX();
             chunkZ = c.getZ();
+        }else{
+            chunkX = Integer.parseInt(args[1]);
+            chunkZ = Integer.parseInt(args[2]);
         }
         Coord coord = new Coord(chunkX, chunkZ);
 
