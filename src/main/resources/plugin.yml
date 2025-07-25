@@ -1,0 +1,6 @@
+name: TownyUtilities
+version: '1.0'
+main: town.sheepy.townyUtilities.TownyUtilities
+api-version: '1.21'
+softdepend:
+  - Towny
