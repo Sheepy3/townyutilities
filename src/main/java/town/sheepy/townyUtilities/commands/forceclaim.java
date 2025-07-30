@@ -103,8 +103,8 @@ public class forceclaim implements CommandExecutor {
 
         FireworkEffect effect = FireworkEffect.builder()
                 .with(FireworkEffect.Type.STAR)
-                .withColor(Color.fromRGB(0xFF9A75))
-                .withFade(Color.fromRGB(0xFFA880))
+                .withColor(Color.ORANGE)
+                .withFade(Color.YELLOW)
                 .trail(true)
                 .flicker(true)
                 .build();
