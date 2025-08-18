@@ -3,6 +3,7 @@ package town.sheepy.townyUtilities;
 import com.palmergames.bukkit.towny.TownyCommandAddonAPI;
 import org.bukkit.plugin.java.JavaPlugin;
 import town.sheepy.townyUtilities.commands.forceclaim;
+import town.sheepy.townyUtilities.commands.purgenations;
 import town.sheepy.townyUtilities.commands.purgetowns;
 public final class TownyUtilities extends JavaPlugin {
 
@@ -19,6 +20,11 @@ public final class TownyUtilities extends JavaPlugin {
                 TownyCommandAddonAPI.CommandType.TOWNYADMIN,    // attach to /townyadmin
                 "purgetowns",                                       // subcommand name
                 new purgetowns(this)                     // your CommandExecutor implementation
+        );
+        TownyCommandAddonAPI.addSubCommand(
+                TownyCommandAddonAPI.CommandType.TOWNYADMIN,    // attach to /townyadmin
+                "purgenations",                                       // subcommand name
+                new purgenations(this)                     // your CommandExecutor implementation
         );
 
     }
